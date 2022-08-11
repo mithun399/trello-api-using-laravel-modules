@@ -1,0 +1,13 @@
+{
+    "name": "Trello",
+    "alias": "trello",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Trello\\Providers\\TrelloServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}
