@@ -14,18 +14,18 @@
       </tr>
     </thead>
     <tbody>
-        @foreach ($list as $key => $value )
+        @foreach ($json as $key => $value )
       <tr>
-        <td>{{ $value['name']}}</td>
-        <td>{{ $value['desc']}}</td>
+        <td>{{ $value->name}}</td>
+        <td>{{ $value->desc}}</td>
         <td>
-          <a href="/editview/{{ $value['id'] }}">
+          <a href="/editview/{{ $value->id }}">
             <button type="button" class="btn btn-primary">Edit</button>
             </a>
-            <a href="/boarddelete/{{ $value['id'] }}">
+            <a href="/boarddelete/{{ $value->id }}">
             <button type="button" class="btn btn-danger">Delete</button>
             </a>
-            <a href="/getboadlist/{{ $value['id'] }}">
+            <a href="/getboadlist/{{ $value->id }}">
                 <button type="button" class="btn btn-success">View List</button>
             </a>
         </td>

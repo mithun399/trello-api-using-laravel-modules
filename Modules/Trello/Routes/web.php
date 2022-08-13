@@ -23,7 +23,7 @@ Route::get('/tokenview',function(){
 });
 
 
-Route::get('/auth',[Modules\Trello\Http\Controllers\TrelloController::class,'auth']);
+Route::get('/auth',[Modules\Trello\Http\Controllers\TrelloController::class,'getUser']);
 Route::get('/token',[Modules\Trello\Http\Controllers\TrelloController::class,'accessToken']);
 Route::get('/board',[Modules\Trello\Http\Controllers\TrelloController::class,'getBoard']);
 Route::get('/boarddelete/{id}',[Modules\Trello\Http\Controllers\TrelloController::class,'deleteBoard']);
@@ -31,9 +31,11 @@ Route::get('/createboardview',[Modules\Trello\Http\Controllers\TrelloController:
 Route::get('/createboard',[Modules\Trello\Http\Controllers\TrelloController::class,'createBoard']);
 Route::get('/editview/{id}',[Modules\Trello\Http\Controllers\TrelloController::class,'editView']);
 Route::get('/updateboard/{id}',[Modules\Trello\Http\Controllers\TrelloController::class,'updateBoard']);
-Route::get('/boardlist/{id}',[Modules\Trello\Http\Controllers\TrelloControllero::class,'boardList']);
-Route::get('/listview/{id}',[Modules\Trello\Http\Controllers\TrelloController::class,'viewList']);
-Route::get('/addlist',[Modules\Trello\Http\Controllers\TrelloController::class,'addList'])->name('addlist');
-Route::get('/cardlist/{id}',[Modules\Trello\Http\Controllers\TrelloController::class,'cardList']);
-Route::get('/cardview/{id}',[Modules\Trello\Http\Controllers\TrelloController::class,'cardView']);
-Route::get('/addcard',[Modules\Trello\Http\Controllers\TrelloController::class,'addCard']);
+
+Route::get('/getboadlist/{id}',[Modules\Trello\Http\Controllers\TrelloController::class,'boardList']);
+Route::get('/createlistview/{id}',[Modules\Trello\Http\Controllers\TrelloController::class,'createlistview']);
+Route::get('/addlist',[Modules\Trello\Http\Controllers\TrelloController::class,'addlist'])->name('addlist');
+Route::get('/getcardlist/{id}',[Modules\Trello\Http\Controllers\TrelloController::class,'getcardlist']);
+Route::get('/addcard',[Modules\Trello\Http\Controllers\TrelloController::class,'addcard']);
+Route::get('/addcardview/{id}',[Modules\Trello\Http\Controllers\TrelloController::class,'addcardview']);
+
